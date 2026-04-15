@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RSAuto</title>
+    <title>RSAuto Console</title>
     <link rel="stylesheet" href="authenticate.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,7 +15,7 @@
     <div class="page-content">
         <div class="return-button">
             <a href="index.html"><i class="fa-solid fa-caret-left"></i></a>
-            Return to homepage
+            <a href="index.html"><p>return</p></a>
         </div>
         <div class="login-panel">
             <h1>Enter username and password for console access.</h1>
@@ -29,10 +29,18 @@
 
                 </div>
             </form>
-            <button type="submit">sign in</button>
+            <button type="submit" id="signin">sign in</button>
             <a href="">forgot password?</a>
         </div>
-        
+
+
+        <div class="admin-panel hidden">
+            <h1>Options</h1>
+            <p>user id: <span id="current-user"></span></p>
+        </div>
     </div>
+
+    <script type=module src="authenticate.js"></script>
+        
 </body>
 </html>

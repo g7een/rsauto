@@ -16,6 +16,19 @@ body {
 
 .return-button{
     position: absolute;
+    left: 20px;
+    top: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.return-button a{
+    text-decoration: none;
+    color:#333131;
+}
+
+.return-button p:hover{
+    color: #636060;
 }
 
 .login-panel{
@@ -26,16 +39,21 @@ body {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    
 }
 
 .login-panel h1{
-    max-width: 500px;
-    font-size: 2rem;
+    max-width: 400px;
+    font-size: 1.8rem;
     font-weight: 350;
     display: flex;
     flex-direction: row;
     text-wrap-mode: wrap;
+}
+
+.login-panel a{
+    color: #333131;
+    font-size: 0.9rem;
+    margin-right: auto;
 }
 
 .credentials {
@@ -73,4 +91,29 @@ body {
     border: none;
     cursor: pointer;
     color: white;
+    margin-left: auto;
+}
+
+.admin-panel{
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 900px;
+    height: 500px;
+    padding: 15px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.admin-panel h1{
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #333131;
+}
+
+.hidden{
+    display: none;
 }
