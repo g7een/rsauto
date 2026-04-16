@@ -31,7 +31,7 @@
                 <div class="vertical-line">
                     <p>|</p>
                 </div>
-                <a href="authenticate.html">sign in</a>
+                <a href="login.php">sign in</a>
             </div>
 
         </span>
