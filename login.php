@@ -1,12 +1,13 @@
 <?php
+
 session_start();
 
 $errors = [];
 if (isset($_GET['error'])) {
     $errors[] = $_GET['error'];
 }
-?>
 
+?>
 
 
 <!DOCTYPE html>
