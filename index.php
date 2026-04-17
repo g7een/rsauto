@@ -89,6 +89,31 @@
         </nav>
     </div>
 
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <div class="search-overlay" id="searchOverlay">
+        <div class="search-overlay-content">
+            
+            <div class="search-top">
+                <input type="text" placeholder="Search" class="search-overlay-input">
+                <button class="cancel-btn" id="closeSearch">Cancel</button>
+            </div>
+
+            <div class="search-suggestions">
+                <p class="suggest-title">Results</p>
+
+                <div class="suggest-items">
+                    <span>engine</span>
+                    <span>brakes</span>
+                    <span>tires</span>
+                    <span>oil change</span>
+                    <span>battery</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
 
     <script type=module src="scripts.js"></script>
     

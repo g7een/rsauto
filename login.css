@@ -83,6 +83,7 @@ body {
 .login-panel button{
     width: 100px;
     height: 40px;
+    margin-top: 10px;
     font-family: 'Archivo';
     align-items: center;
     justify-content: center;

@@ -221,6 +221,86 @@ header{
     font-weight: 400;
 }
 
+.search-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+
+    background: rgba(255,255,255,1);
+    z-index: 100;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.25s ease;
+}
+
+.search-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.search-overlay-content {
+    width: 100%;
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 20px;
+}
+
+.search-top {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-overlay-input {
+    flex: 1;
+    height: 45px;
+    border-radius: 30px;
+    border: none;
+    background: #eee;
+    padding: 0 20px;
+    font-size: 1rem;
+    outline: none;
+    font-family: 'Archivo';
+}
+
+.cancel-btn {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.search-suggestions {
+    margin-top: 30px;
+}
+
+.suggest-title {
+    font-size: 0.9rem;
+    color: gray;
+    margin-bottom: 10px;
+}
+
+.suggest-items {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.suggest-items span {
+    padding: 8px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+.suggest-items span:hover {
+    background: #f1f1f1;
+}
+
+
 
 @media (max-width: 768px) {
     header {
