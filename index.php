@@ -23,15 +23,15 @@
                 <div class="vertical-line">
                     <p>|</p>
                 </div>
-                <a href="">documentation</a>
+                <a href="">GitHub</a>
                 <div class="vertical-line">
                     <p>|</p>
                 </div>
-                <a href="">yea</a>
+                <a href="">Locate</a>
                 <div class="vertical-line">
                     <p>|</p>
                 </div>
-                <a href="login.php">sign in</a>
+                <a href="login.php">Sign In</a>
             </div>
 
         </span>
@@ -39,15 +39,15 @@
     <div class="navigation-wrapper">
         <nav class="navigation">
             <h2 class="navigation-store-title">
-                rsauto
+                RSAuto
             </h2>
             <div class="navigation-links">
                 <div class="nav-item dropdown">
 
-                    <a href="" class="navlink">Inventory</a>
+                    <a href="" class="navlink">Auto Listings</a>
                     
                 </div>
-
+                
                 <div class="quotes menu-dropdown">
                     <a href="" class="navlink">Quotes</a>
                     <div class="menu-dropdown-content">
@@ -77,7 +77,7 @@
                 </div>
 
                 <div class="misc menu-dropdown">
-                    <a href="" class="navlink">Misc</a>
+                    <a href="" class="navlink">Repairs</a>
                 </div>
 
             </div>
