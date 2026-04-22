@@ -1,3 +1,5 @@
+<?php include 'db.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -89,7 +91,43 @@
         </nav>
     </div>
 
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="page-content">
+        <div class="landing-wrapper">
+            <p>Landing Section</p>
+        </div>
+
+        <div class="listings-wrapper">
+            <div class="listings-navigation-wrapper">
+                <p>Finding a listing?:</p>
+                <!--<div class="listings-search-wrapper">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search..." class="searchInput">
+                </div>-->
+            </div>
+
+            <div class="listings-grid">
+                <?php
+                $sql = "SELECT * FROM listings ORDER BY created_at DESC";
+                $result = $conn->query($sql);
+
+                while($row = $result->fetch_assoc()):
+                ?>
+                    <div class="listing-card">
+                        <img src="<?= $row['image_url'] ?>" alt="car image">
+                        <h3><?= $row['title'] ?></h3>
+                        <p>$<?= $row['price'] ?></p>
+                        <p>description: <?= $row['description'] ?></p>
+                    </div>
+                <?php endwhile; ?>
+            </div>
+        </div>
+
+        <footer>
+            <p>footer hello footer</p>
+        </footer>
+    </div>
+
+
 
     <div class="search-overlay" id="searchOverlay">
         <div class="search-overlay-content">
@@ -113,6 +151,7 @@
 
         </div>
     </div>
+
 
 
     <script type=module src="scripts.js"></script>

@@ -92,11 +92,6 @@ body{
 
 }
 
-.adding-data{
-    height:310px;
-    width: 100%;
-}
-
 .adding-listings button{
     width: 120px;
     height: 40px;
@@ -109,17 +104,45 @@ body{
     color: white;
     margin: auto 0px;
     margin-left: auto;
-    margin-right: 20px;
 }
 
 .adding-listings button:hover{
     color: #b8b8b8;
 }
 
+
+.adding-listings form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0px;
+}
+
+.adding-listings input{
+    color: black;
+    outline: none;
+    border-radius: 16px;
+    border: none;
+    height: 30px;
+    padding: 5px 20px;
+    background-color: #dfdfdf;
+}
+
+.adding-listings textarea{
+    color: black;
+    outline: none;
+    border-radius: 16px;
+    border: none;
+    height: 180px;
+    padding: 10px 20px;
+    background-color: #dfdfdf;
+    resize: none
+}
+
 .console-users-container{
     position: relative;
     width: 100%;
-    height: 400px;
+    height: 350px;
     display: flex;
     flex-direction: row;
 

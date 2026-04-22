@@ -28,13 +28,32 @@
             <div class="console-listings-container">
                 <div class="view-listings">
                     <p class="listings-header">Current Listings</p>
+                        <?php include 'db.php'; ?>
+
+                        <?php
+                        $sql = "SELECT * FROM listings ORDER BY created_at DESC";
+                        $result = $conn->query($sql);
+
+                        while($row = $result->fetch_assoc()):
+                        ?>
+                            <div>
+                                <p><?= $row['title'] ?></p>
+                                <p>$<?= $row['price'] ?></p>
+                            </div>
+                            <hr>
+                        <?php endwhile; ?>
+                        
                 </div>
                 <div class="adding-listings">
                     <p class="listings-header">Add listing</p>
-                    <div class="adding-data">
+                    <form action="add_listing.php" method="POST">
+                        <input type="text" name="title" placeholder="Car Title" required>
+                        <input type="number" step="0.01" name="price" placeholder="Price" required>
+                        <input type="text" name="image_url" placeholder="Image URL">
+                        <textarea name="description" placeholder="Description"></textarea>
 
-                    </div>
-                    <button type="submit" id="addListing">Add</button>
+                        <button type="submit">Add</button>
+                    </form>
                 </div>
             </div>
 
