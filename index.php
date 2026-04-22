@@ -19,11 +19,11 @@
             <h2>[logo]</h2>
 
             <div class="header-links">
-                <a href="">since 2023</a>
+                <p>since 2023</p>
                 <div class="vertical-line">
                     <p>|</p>
                 </div>
-                <a href="">GitHub</a>
+                <a href="https://github.com/g7een/rsauto" target="_blank">GitHub</a>
                 <div class="vertical-line">
                     <p>|</p>
                 </div>

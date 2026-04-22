@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Archivo';
 }
 
 html{
@@ -11,6 +11,25 @@ html{
 
 body{
     min-height: 100vh;
+    background-color: #F7F7F5;
+}
+
+.return-button{
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    display: flex;
+    flex-direction: row;
+    z-index: 100;
+}
+
+.return-button a{
+    text-decoration: none;
+    color:#333131;
+}
+
+.return-button p:hover{
+    color: #636060;
 }
 
 .console-page{
@@ -47,8 +66,8 @@ body{
     height: 400px;
     display: flex;
     flex-direction: row;
-    border: 1px solid black;
     border-radius: 16px;
+    gap: 20px;
 }
 
 .view-listings{
@@ -56,7 +75,7 @@ body{
     height: 100%;
     display: flex;
     flex-direction: column;
-    padding: 5px 10px;
+    background-color: #F7F7F5;
 }
 
 .adding-listings{
@@ -64,11 +83,66 @@ body{
     height: 100%;
     display: flex;
     flex-direction: column;
-    padding: 5px 10px;
+    background-color: #F7F7F5;
+}
+
+.listings-header{
+    background-color: #9190907e;
+    padding: 4px 8px;
+
+}
+
+.adding-data{
+    height:310px;
+    width: 100%;
+}
+
+.adding-listings button{
+    width: 120px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background-color: #504d4d;
+    border: none;
+    cursor: pointer;
+    color: white;
+    margin: auto 0px;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.adding-listings button:hover{
+    color: #b8b8b8;
+}
+
+.console-users-container{
+    position: relative;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.console-user-header{
+    width: 100%;
+
+}
+
+.disclaimer{
+    text-decoration: underline;
 }
 
 
 footer{
-    padding: 5px 30px;
+    position: relative;
+
+    width: 100vw;
+    max-width: 1200px;
+    min-width: 768px;
+
+    padding: 20px 30px;
     margin: 0px auto;
+    bottom: 2%;
 }

@@ -14,7 +14,7 @@ if (isset($_GET['error'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RSAuto Console</title>
+    <title>Admin Login</title>
     <link rel="stylesheet" href="login.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,7 +27,7 @@ if (isset($_GET['error'])) {
     <div class="page-content">
         <div class="return-button">
             <a href="index.php"><i class="fa-solid fa-caret-left"></i></a>
-            <a href="index.php"><p>return</p></a>
+            <a href="index.php"><p>Return</p></a>
         </div>
         <div class="login-panel">
             <h1>Enter username and password for console access.</h1>
