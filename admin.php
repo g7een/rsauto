@@ -1,3 +1,9 @@
+<?php
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,11 +42,16 @@
 
                         while($row = $result->fetch_assoc()):
                         ?>
-                            <div>
-                                <p><?= $row['title'] ?></p>
-                                <p>$<?= $row['price'] ?></p>
+                            <div class="listing-cell">
+                                <div>
+                                    <p><?= $row['title'] ?></p>
+                                    <p>$<?= $row['price'] ?></p>
+                                </div>
+
+                                <button class="edit">Edit</button>
+
                             </div>
-                            <hr>
+
                         <?php endwhile; ?>
                         
                 </div>
@@ -49,7 +60,14 @@
                     <form action="add_listing.php" method="POST">
                         <input type="text" name="title" placeholder="Car Title" required>
                         <input type="number" step="0.01" name="price" placeholder="Price" required>
-                        <input type="text" name="image_url" placeholder="Image URL">
+
+                        <div class="listings-image">
+                            <input type="text" name="image_url" placeholder="Image URL">
+                            <div class="listings-image-drag">
+                                <i class="fa-regular fa-file-image"></i>
+                            </div>
+                        </div>
+                    
                         <textarea name="description" placeholder="Description"></textarea>
 
                         <button type="submit">Add</button>

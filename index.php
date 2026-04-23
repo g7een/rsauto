@@ -113,7 +113,7 @@
                 while($row = $result->fetch_assoc()):
                 ?>
                     <div class="listing-card">
-                        <img src="<?= $row['image_url'] ?>" alt="car image">
+                        <img src="<?= $row['image_url'] ?>" alt="User provided image">
                         <h3><?= $row['title'] ?></h3>
                         <p>$<?= $row['price'] ?></p>
                         <p>description: <?= $row['description'] ?></p>

@@ -55,7 +55,7 @@ body{
 .admin-console-header{
     width: 90%;
     height: 30px;
-    margin: 10px auto;
+    margin: 0px auto;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -76,6 +76,7 @@ body{
     display: flex;
     flex-direction: column;
     background-color: #F7F7F5;
+    gap: 5px;
 }
 
 .adding-listings{
@@ -107,6 +108,7 @@ body{
 }
 
 .adding-listings button:hover{
+    text-decoration: underline;
     color: #b8b8b8;
 }
 
@@ -139,6 +141,57 @@ body{
     resize: none
 }
 
+.listings-image{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.listings-image input{
+    width: 400px;
+}
+
+.listings-image-drag{
+    color: black;
+    outline: none;
+    border-radius: 16px;
+    border: none;
+    height: 30px;
+    width: 60px;
+    padding: 7px 20px;
+    background-color: #dfdfdf;
+    cursor: pointer;
+}
+
+.listings-image-drag i{
+    color: #a09f9f;
+}
+
+.listing-cell{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.listing-cell button{
+    width: 60px;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background-color: #a09f9f;
+    border: none;
+    cursor: pointer;
+    color: white;
+    margin: none;
+}
+
+.listing-cell button:hover{
+    text-decoration: underline;
+    color: #b8b8b8;
+
+}
+
 .console-users-container{
     position: relative;
     width: 100%;
@@ -165,7 +218,7 @@ footer{
     max-width: 1200px;
     min-width: 768px;
 
-    padding: 20px 30px;
+    padding: 10px 30px;
     margin: 0px auto;
     bottom: 2%;
 }

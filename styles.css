@@ -361,6 +361,7 @@ header{
     align-items: center;
     border-radius: 20px;
 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .listings-search-wrapper input{
@@ -373,6 +374,7 @@ header{
     font-size: 0.9rem;
     outline: none;
     font-weight: 400;
+    
 }
 
 /* Continue */
