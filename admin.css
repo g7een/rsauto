@@ -20,7 +20,7 @@ body{
     top: 20px;
     display: flex;
     flex-direction: row;
-    z-index: 100;
+    z-index: 10;
 }
 
 .return-button a{
@@ -123,17 +123,22 @@ body{
 .adding-listings input{
     color: black;
     outline: none;
-    border-radius: 16px;
     border: none;
     height: 30px;
     padding: 5px 20px;
     background-color: #dfdfdf;
+    border-radius: 8px;
 }
+
+.listings-image input{
+    border-radius: 8px;
+}
+
 
 .adding-listings textarea{
     color: black;
     outline: none;
-    border-radius: 16px;
+    border-radius: 8px;
     border: none;
     height: 180px;
     padding: 10px 20px;
@@ -154,13 +159,13 @@ body{
 .listings-image-drag{
     color: black;
     outline: none;
-    border-radius: 16px;
     border: none;
     height: 30px;
     width: 60px;
     padding: 7px 20px;
     background-color: #dfdfdf;
     cursor: pointer;
+    border-radius: 8px;
 }
 
 .listings-image-drag i{
@@ -178,17 +183,15 @@ body{
     height: auto;
     align-items: center;
     justify-content: center;
-    border-radius: 20px;
-    background-color: #a09f9f;
     border: none;
     cursor: pointer;
-    color: white;
+    color: black;
     margin: none;
 }
 
 .listing-cell button:hover{
     text-decoration: underline;
-    color: #b8b8b8;
+    color: #474747;
 
 }
 
@@ -204,6 +207,38 @@ body{
 .console-user-header{
     width: 100%;
 
+}
+
+.edit-panel{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    align-items: center;
+    background-color: #f0f0ea;
+    z-index: 9999;
+
+    width: 450px;
+    height: 100%;
+
+}
+
+.edit-panel-nav{
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.edit-panel-close{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    top: 20px;
+    right: 15px;
+    color: gray;
+    text-decoration: underline;
 }
 
 .disclaimer{

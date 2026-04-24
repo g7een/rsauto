@@ -84,6 +84,19 @@
         </div>
     </section>
 
+    <div class="edit-panel hidden">
+        <div class="edit-panel-nav">
+            Editing Listing
+        </div>
+        <div class="edit-panel-close">
+            <p>Collapse</p>
+        </div>
+
+
+    </div>
+
+    </menu>
+
     <footer>
         <p class="disclaimer">*Do not modify listings or site data without prior approval.</p>
     </footer>
