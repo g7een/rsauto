@@ -98,7 +98,7 @@ body{
     height: 40px;
     align-items: center;
     justify-content: center;
-    border-radius: 20px;
+    border-radius: 2px;
     background-color: #504d4d;
     border: none;
     cursor: pointer;
@@ -219,6 +219,7 @@ body{
     background-color: #f0f0ea;
     z-index: 9999;
 
+    border: none;
     width: 450px;
     height: 100%;
 
@@ -239,10 +240,16 @@ body{
     right: 15px;
     color: gray;
     text-decoration: underline;
+    font-size: 0.9rem;
+    cursor: pointer;
 }
 
 .disclaimer{
     text-decoration: underline;
+}
+
+.hidden{
+    display: none;
 }
 
 

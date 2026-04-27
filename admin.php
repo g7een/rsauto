@@ -48,7 +48,7 @@
                                     <p>$<?= $row['price'] ?></p>
                                 </div>
 
-                                <button class="edit">Edit</button>
+                                <button class="edit" id="editbutton">Edit</button>
 
                             </div>
 
@@ -84,11 +84,11 @@
         </div>
     </section>
 
-    <div class="edit-panel hidden">
+    <div class="edit-panel hidden" id="editpanel">
         <div class="edit-panel-nav">
             Editing Listing
         </div>
-        <div class="edit-panel-close">
+        <div class="edit-panel-close" id="collapse">
             <p>Collapse</p>
         </div>
 
@@ -100,6 +100,8 @@
     <footer>
         <p class="disclaimer">*Do not modify listings or site data without prior approval.</p>
     </footer>
+
+    <script type=module src="admin.js"></script>
 
 </body>
 </html>
