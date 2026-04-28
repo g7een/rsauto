@@ -40,7 +40,7 @@ header{
     align-items: center;
     gap: 10px;
     padding-right: 15px;
-
+    font-weight:200;
 }
 
 .header-text-wrapper {
@@ -336,15 +336,21 @@ header{
     position: relative;
     width: 80%;
     max-width: 1000px;
+    min-width: 420px;
     min-height: 40px;
     padding: 2px 35px;
     margin: 10px auto;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
     border-radius: 20px;
     background-color: #ffffff;
+    gap: 20px;
+}
+
+.listings-navigation-wrapper p{
+    min-width: 130px;
+    width: 130px;
 }
 
 .listings-search-wrapper{
@@ -352,10 +358,10 @@ header{
     display: flex;
     flex-direction: row;
     gap: 5px;
-    width: 300;
+    width: 790px;
     min-width: 200px;
     height: 30px;
-    justify-content: center;
+    padding: 0px 10px;
     
     background-color: #dbd9d9;
     align-items: center;
@@ -365,16 +371,17 @@ header{
 }
 
 .listings-search-wrapper input{
-    width: auto;
-    height: 30px;
+    width: 100%;
+    height: 100%;
     border: none;
     background-color: transparent;
     color: black;
     padding: 0 10px;
     font-size: 0.9rem;
     outline: none;
-    font-weight: 400;
-    
+    font-weight: 300;
+    font-family: 'Archivo';
+
 }
 
 /* Continue */

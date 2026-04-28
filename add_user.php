@@ -18,14 +18,12 @@ if ($check->num_rows > 0) {
     die("User already exists.");
 }
 
-$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-
 $stmt = $conn->prepare("
     INSERT INTO users (username, email, password)
     VALUES (?, ?, ?)
 ");
 
-$stmt->bind_param("sss", $username, $email, $hashedPassword);
+$stmt->bind_param("sss", $username, $email, $password);
 $stmt->execute();
 
 header("Location: admin.php");
