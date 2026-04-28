@@ -61,3 +61,23 @@ overlayInput.addEventListener("input", function () {
         });
 });
 
+
+const hamburger = document.getElementById("hamburger");
+const sideMenu = document.getElementById("sideMenu");
+
+hamburger.addEventListener("click", () => {
+    sideMenu.classList.toggle("active");
+});
+
+document.addEventListener("click", (e) => {
+    if (!sideMenu.contains(e.target) && !hamburger.contains(e.target)) {
+        sideMenu.classList.remove("active");
+    }
+});
+
+document.querySelectorAll(".side-title").forEach(title => {
+    title.addEventListener("click", () => {
+        const parent = title.parentElement;
+        parent.classList.toggle("active");
+    });
+});

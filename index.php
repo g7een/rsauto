@@ -40,9 +40,39 @@
     </header>
     <div class="navigation-wrapper">
         <nav class="navigation">
+            <div class="hamburger" id="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="side-menu" id="sideMenu">
+                <div class="side-menu-content">
+
+                    <div class="side-item">
+                        <p class="side-title">Auto Listings</p>
+                    </div>
+
+                    <div class="side-item">
+                        <p class="side-title">Quotes</p>
+                        <div class="side-submenu">
+                            <p>item 1</p>
+                            <p>item 2</p>
+                        </div>
+                    </div>
+
+                    <div class="side-item">
+                        <p class="side-title">Repairs</p>
+                        <div class="side-submenu">
+                            <p>item 1</p>
+                            <p>item 2</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
             <h2 class="navigation-store-title">
                 RSAuto
             </h2>
+
             <div class="navigation-links">
                 <div class="nav-item dropdown">
 
