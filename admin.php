@@ -48,8 +48,15 @@
                                     <p>$<?= $row['price'] ?></p>
                                 </div>
 
-                                <button class="edit" id="editbutton">Edit</button>
-
+                                <button 
+                                    class="edit"
+                                    data-id="<?= $row['id'] ?>"
+                                    data-title="<?= htmlspecialchars($row['title']) ?>"
+                                    data-price="<?= $row['price'] ?>"
+                                    data-description="<?= htmlspecialchars($row['description']) ?>"
+                                >
+                                    Edit
+                                </button>
                             </div>
 
                         <?php endwhile; ?>
@@ -125,10 +132,23 @@
         <div class="edit-panel-nav">
             Editing Listing
         </div>
+
         <div class="edit-panel-close" id="collapse">
             <p>Collapse</p>
         </div>
 
+        <form id="editForm" action="update_listing.php" method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="id" id="edit-id">
+
+            <input type="text" name="title" id="edit-title" placeholder="Title" required>
+            <input type="number" step="0.01" name="price" id="edit-price" placeholder="Price" required>
+
+            <input type="file" name="image">
+
+            <textarea name="description" id="edit-description" placeholder="Description"></textarea>
+
+            <button type="submit">Save Changes</button>
+        </form>
     </div>
 
 

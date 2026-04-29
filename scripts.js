@@ -81,3 +81,35 @@ document.querySelectorAll(".side-title").forEach(title => {
         parent.classList.toggle("active");
     });
 });
+
+const listingsSearch = document.querySelector(".listings-search-wrapper input");
+const listingsGrid = document.querySelector(".listings-grid");
+
+listingsSearch.addEventListener("input", function () {
+    let query = this.value;
+
+    fetch("search_listings.php?q=" + encodeURIComponent(query))
+        .then(res => res.json())
+        .then(data => {
+            listingsGrid.innerHTML = "";
+
+            if (data.length === 0) {
+                listingsGrid.innerHTML = "<p>No listings found.</p>";
+                return;
+            }
+
+            data.forEach(item => {
+                let card = document.createElement("div");
+                card.classList.add("listing-card");
+
+                card.innerHTML = `
+                    <img src="${item.image_url}" alt="Listing image">
+                    <h3>${item.title}</h3>
+                    <p>$${item.price}</p>
+                    <p>${item.description}</p>
+                `;
+
+                listingsGrid.appendChild(card);
+            });
+        });
+});

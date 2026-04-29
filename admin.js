@@ -1,9 +1,3 @@
-document.querySelectorAll(".edit").forEach(btn => {
-    btn.addEventListener("click", () => {
-        document.querySelector(".edit-panel").classList.remove("hidden");
-    });
-});
-
 let collapse = document.getElementById("collapse");
 collapse.addEventListener("click", () => {
     document.querySelector(".edit-panel").classList.add("hidden");
@@ -38,4 +32,15 @@ fileInput.addEventListener("change", () => {
     if (file) {
         dropZone.innerHTML = `<p>${file.name}</p>`;
     }
+});
+
+document.querySelectorAll(".edit").forEach(btn => {
+    btn.addEventListener("click", () => {
+        document.querySelector(".edit-panel").classList.remove("hidden");
+
+        document.getElementById("edit-id").value = btn.dataset.id;
+        document.getElementById("edit-title").value = btn.dataset.title;
+        document.getElementById("edit-price").value = btn.dataset.price;
+        document.getElementById("edit-description").value = btn.dataset.description;
+    });
 });
