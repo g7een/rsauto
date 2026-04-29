@@ -87,8 +87,11 @@ const listingsGrid = document.querySelector(".listings-grid");
 
 listingsSearch.addEventListener("input", function () {
     let query = this.value;
+    if (!query){
+        console.log("hi");
+    }
 
-    fetch("search_listings.php?q=" + encodeURIComponent(query))
+    fetch("search_listings.php?q=" + query)
         .then(res => res.json())
         .then(data => {
             listingsGrid.innerHTML = "";
@@ -113,3 +116,4 @@ listingsSearch.addEventListener("input", function () {
             });
         });
 });
+
