@@ -289,6 +289,14 @@ body{
     border-color: #333;
 }
 
+#editForm{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
 footer{
     position: relative;
 
