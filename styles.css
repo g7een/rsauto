@@ -394,6 +394,21 @@ header{
     margin-top: 20px;
 }
 
+#listingForm{
+}
+
+.listing-wrap{
+    outline: none;
+    border: none;
+    background: none;
+    padding: none;
+    margin: none;
+    width: 100%;
+    height: 100%;
+    font-family: 'Archivo';
+    cursor: pointer;
+}
+
 .listing-card {
     background: #F7F7F5;
     padding: 20px;

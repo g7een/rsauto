@@ -76,6 +76,7 @@
                                 <p>Drop image</p>
                             </div>
 
+                            <!---Album upload--->
                             <input type="file" id="fileInput" name="image" hidden>
                         </div>
                     

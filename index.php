@@ -142,15 +142,14 @@
                 while($row = $result->fetch_assoc()):
                 ?>
                     <form id="listingForm" action="listing_page.php" method="POST" enctype="multipart/form-data">
-                        <div class="listing-card">
+                        <!--<div class="listing-card">
                             <img src="<?= $row['image_url'] ?>" alt="User provided image">
                             <h3><?= $row['title'] ?></h3>
                             <p>$<?= $row['price'] ?></p>
                             <p>description: <?= $row['description'] ?></p>
-                        </div>
+                        </div>-->
 
-                        <!--
-                        <button type = "submit">
+                        <button type = "submit" class="listing-wrap"">
                             <div class="listing-card">
                                 <img src="<?= $row['image_url'] ?>" alt="User provided image">
                                 <h3><?= $row['title'] ?></h3>
@@ -158,7 +157,7 @@
                                 <p>description: <?= $row['description'] ?></p>
                             </div>
                         </button>
-                        -->
+                        
 
                     </form>
                 <?php endwhile; ?>
