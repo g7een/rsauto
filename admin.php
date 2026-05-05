@@ -64,20 +64,31 @@
                 </div>
                 <div class="adding-listings">
                     <p class="listings-header">Add listing</p>
-                    <form action="add_listing.php" method="POST" enctype="multipart/form-data">
+                    <form action="add_listing.php" method="POST" enctype="multipart/form-data" id="addListingForm">
                         <input type="text" name="title" placeholder="Car Title" required>
                         <input type="number" step="0.01" name="price" placeholder="Price" required>
 
                         <div class="listings-image">
                             <input type="hidden" name="image_url" id="image_url">
 
-                            <div class="listings-image-drag" id="dropZone">
+                            <!--<div class="listings-image-drag" id="dropZone">
                                 <i class="fa-regular fa-file-image"></i>
-                                <p>Drop image</p>
-                            </div>
+                                <p>Drop or select images</p>
+                            </div>-->
 
                             <!---Album upload--->
-                            <input type="file" id="fileInput" name="image" hidden>
+                            <input type="file" id="fileInput" name="images[]" accept="image/*" multiple>
+                        </div>
+
+                        <div class="image-queue-panel" id="imageQueuePanel">
+                            <div class="image-queue-header">
+                                <p>Listing images</p>
+                                <button type="button" id="addMoreImages">Add images</button>
+                            </div>
+                            <div class="image-queue-empty" id="imageQueueEmpty">
+                                No images selected yet.
+                            </div>
+                            <div class="image-queue" id="imageQueue"></div>
                         </div>
                     
                         <textarea name="description" placeholder="Description"></textarea>
@@ -150,6 +161,9 @@
 
             <button type="submit">Save Changes</button>
         </form>
+
+        <div id="imageManager"></div>
+        <input type="file" name="new_images[]" multiple>
     </div>
 
 

@@ -63,7 +63,7 @@ body{
 
 .console-listings-container{
     width: 100%;
-    height: 400px;
+    min-height: 400px;
     display: flex;
     flex-direction: row;
     border-radius: 16px;
@@ -153,7 +153,11 @@ body{
 }
 
 .listings-image input{
-    width: 400px;
+    width: 100%;
+}
+
+.listings-image input[type="file"] {
+    display: none;
 }
 
 .listings-image-drag{
@@ -282,6 +286,140 @@ body{
     gap: 5px;
     cursor: pointer;
     border-radius: 8px;
+}
+
+.image-queue-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px;
+    border: 1px solid #d0d0ca;
+    border-radius: 8px;
+    background-color: #eeeeea;
+}
+
+.image-queue-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.image-queue-header p {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.image-queue-header button,
+.image-queue-actions button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+}
+
+.adding-listings .image-queue-header button {
+    width: auto;
+    height: 30px;
+    margin: 0;
+    padding: 0 10px;
+    border-radius: 4px;
+    background-color: #504d4d;
+}
+
+.image-queue-empty {
+    padding: 12px;
+    border: 1px dashed #b8b8b4;
+    border-radius: 8px;
+    color: #666;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+.image-queue-empty.error {
+    border-color: #9d3333;
+    color: #9d3333;
+}
+
+.image-queue {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-height: 220px;
+    overflow-y: auto;
+}
+
+.image-queue-item {
+    display: grid;
+    grid-template-columns: 18px 56px minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 8px;
+    min-height: 68px;
+    padding: 6px;
+    border-radius: 8px;
+    background-color: #dfdfdf;
+}
+
+.image-queue-item.dragging {
+    opacity: 0.55;
+}
+
+.image-drag-handle {
+    color: #777;
+    cursor: grab;
+    text-align: center;
+}
+
+.image-queue-item img {
+    width: 56px;
+    height: 56px;
+    object-fit: cover;
+    border-radius: 6px;
+    background-color: #ccc;
+}
+
+.image-queue-details {
+    min-width: 0;
+}
+
+.image-queue-details p {
+    overflow: hidden;
+    color: #1f1f1f;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.image-queue-details span {
+    color: #666;
+    font-size: 0.78rem;
+}
+
+.image-queue-actions {
+    display: flex;
+    gap: 4px;
+}
+
+.image-queue-actions button {
+    width: 28px;
+    height: 28px;
+    margin: 0;
+    margin-left: 0;
+    border-radius: 4px;
+    background-color: #f7f7f5;
+    color: #333131;
+}
+
+.image-queue-actions button:disabled {
+    cursor: not-allowed;
+    opacity: 0.35;
+}
+
+.image-manager-note {
+    color: #666;
+    font-size: 0.85rem;
 }
 
 .listings-image-drag.dragover {
