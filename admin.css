@@ -295,7 +295,7 @@ body{
     padding: 10px;
     border: 1px solid #d0d0ca;
     border-radius: 8px;
-    background-color: #eeeeea;
+    background-color: #dfdfdf;
 }
 
 .image-queue-header {
@@ -307,7 +307,7 @@ body{
 
 .image-queue-header p {
     font-size: 0.9rem;
-    font-weight: 600;
+    font-weight: 300;
 }
 
 .image-queue-header button,
@@ -376,7 +376,7 @@ body{
     height: 56px;
     object-fit: cover;
     border-radius: 6px;
-    background-color: #ccc;
+    background-color: #dfdfdf;
 }
 
 .image-queue-details {

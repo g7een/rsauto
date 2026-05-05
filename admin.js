@@ -9,11 +9,11 @@ const imageQueue = document.getElementById("imageQueue");
 const imageQueueEmpty = document.getElementById("imageQueueEmpty");
 const addMoreImages = document.getElementById("addMoreImages");
 const addListingForm = document.getElementById("addListingForm");
+
 let selectedImages = [];
 let draggedImageIndex = null;
 
 dropZone.addEventListener("click", () => fileInput.click());
-addMoreImages.addEventListener("click", () => fileInput.click());
 
 dropZone.addEventListener("dragover", (e) => {
     e.preventDefault();

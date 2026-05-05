@@ -173,5 +173,38 @@
 
     <script type=module src="admin.js"></script>
 
+    <div class="edit-panel hidden" id="editpanel">
+        <div class="edit-panel-nav">
+            Editing Listing
+        </div>
+
+        <div class="edit-panel-close" id="collapse">
+            <p>Collapse</p>
+        </div>
+
+        <form id="editForm" action="update_listing.php" method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="id" id="edit-id">
+
+            <input type="text" name="title" id="edit-title" placeholder="Title" required>
+            <input type="number" step="0.01" name="price" id="edit-price" placeholder="Price" required>
+
+            <input type="file" name="image">
+
+            <textarea name="description" id="edit-description" placeholder="Description"></textarea>
+
+            <button type="submit">Save Changes</button>
+        </form>
+
+        <div id="imageManager"></div>
+        <input type="file" name="new_images[]" multiple>
+    </div>
+
+
+    <footer>
+        <p class="disclaimer">*Do not modify listings or site data without prior approval.</p>
+    </footer>
+
+    <script type=module src="admin.js"></script>
+
 </body>
 </html>
