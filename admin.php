@@ -71,10 +71,10 @@
                         <div class="listings-image">
                             <input type="hidden" name="image_url" id="image_url">
 
-                            <!--<div class="listings-image-drag" id="dropZone">
+                            <div class="listings-image-drag" id="dropZone">
                                 <i class="fa-regular fa-file-image"></i>
                                 <p>Drop or select images</p>
-                            </div>-->
+                            </div>
 
                             <!---Album upload--->
                             <input type="file" id="fileInput" name="images[]" accept="image/*" multiple>
@@ -155,48 +155,15 @@
             <input type="text" name="title" id="edit-title" placeholder="Title" required>
             <input type="number" step="0.01" name="price" id="edit-price" placeholder="Price" required>
 
-            <input type="file" name="image">
-
             <textarea name="description" id="edit-description" placeholder="Description"></textarea>
+
+            <label for="edit-new-images">Add listing images</label>
+            <input type="file" id="edit-new-images" name="new_images[]" accept="image/*" multiple>
 
             <button type="submit">Save Changes</button>
         </form>
 
         <div id="imageManager"></div>
-        <input type="file" name="new_images[]" multiple>
-    </div>
-
-
-    <footer>
-        <p class="disclaimer">*Do not modify listings or site data without prior approval.</p>
-    </footer>
-
-    <script type=module src="admin.js"></script>
-
-    <div class="edit-panel hidden" id="editpanel">
-        <div class="edit-panel-nav">
-            Editing Listing
-        </div>
-
-        <div class="edit-panel-close" id="collapse">
-            <p>Collapse</p>
-        </div>
-
-        <form id="editForm" action="update_listing.php" method="POST" enctype="multipart/form-data">
-            <input type="hidden" name="id" id="edit-id">
-
-            <input type="text" name="title" id="edit-title" placeholder="Title" required>
-            <input type="number" step="0.01" name="price" id="edit-price" placeholder="Price" required>
-
-            <input type="file" name="image">
-
-            <textarea name="description" id="edit-description" placeholder="Description"></textarea>
-
-            <button type="submit">Save Changes</button>
-        </form>
-
-        <div id="imageManager"></div>
-        <input type="file" name="new_images[]" multiple>
     </div>
 
 

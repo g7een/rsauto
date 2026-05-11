@@ -13,23 +13,29 @@ const addListingForm = document.getElementById("addListingForm");
 let selectedImages = [];
 let draggedImageIndex = null;
 
-dropZone.addEventListener("click", () => fileInput.click());
+if (dropZone) {
+    dropZone.addEventListener("click", () => fileInput.click());
 
-dropZone.addEventListener("dragover", (e) => {
-    e.preventDefault();
-    dropZone.classList.add("dragover");
-});
+    dropZone.addEventListener("dragover", (e) => {
+        e.preventDefault();
+        dropZone.classList.add("dragover");
+    });
 
-dropZone.addEventListener("dragleave", () => {
-    dropZone.classList.remove("dragover");
-});
+    dropZone.addEventListener("dragleave", () => {
+        dropZone.classList.remove("dragover");
+    });
 
-dropZone.addEventListener("drop", (e) => {
-    e.preventDefault();
-    dropZone.classList.remove("dragover");
+    dropZone.addEventListener("drop", (e) => {
+        e.preventDefault();
+        dropZone.classList.remove("dragover");
 
-    addFiles(e.dataTransfer.files);
-});
+        addFiles(e.dataTransfer.files);
+    });
+}
+
+if (addMoreImages) {
+    addMoreImages.addEventListener("click", () => fileInput.click());
+}
 
 fileInput.addEventListener("change", () => {
     addFiles(fileInput.files);
@@ -78,10 +84,12 @@ function renderImageQueue() {
     imageQueueEmpty.classList.remove("error");
     imageQueueEmpty.textContent = "No images selected yet.";
 
-    dropZone.innerHTML = `
-        <i class="fa-regular fa-file-image"></i>
-        <p>${selectedImages.length ? `${selectedImages.length} image${selectedImages.length === 1 ? "" : "s"} selected` : "Drop or select images"}</p>
-    `;
+    if (dropZone) {
+        dropZone.innerHTML = `
+            <i class="fa-regular fa-file-image"></i>
+            <p>${selectedImages.length ? `${selectedImages.length} image${selectedImages.length === 1 ? "" : "s"} selected` : "Drop or select images"}</p>
+        `;
+    }
 
     selectedImages.forEach((image, index) => {
         const row = document.createElement("div");
@@ -196,10 +204,11 @@ function loadImages(listingId) {
         container.innerHTML = "";
 
         data.forEach(img => {
+            const deleteButton = Number(img.id) > 0 ? `<button onclick="deleteImage(${img.id})">Delete</button>` : "";
             container.innerHTML += `
                 <div class="img-row" data-id="${img.id}">
                     <img src="${img.image_url}" width="80">
-                    <button onclick="deleteImage(${img.id})">Delete</button>
+                    ${deleteButton}
                 </div>
             `;
         });
