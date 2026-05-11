@@ -55,9 +55,11 @@ body {
     flex: 1 1 65%;
     min-width: 0;
     display: flex;
+    flex-direction: row;
     background-color: #e7e7e1;
     border-radius: 8px;
     overflow: hidden;
+    height: fit-content;
 }
 
 .album-scroll {
@@ -65,7 +67,7 @@ body {
     max-height: calc(100vh - 100px);
     overflow-y: auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 12px;
     padding: 12px;
 }
@@ -130,13 +132,56 @@ h1 {
     flex-direction: column;
     gap: 8px;
     padding-top: 14px;
-    border-top: 1px solid #deded9;
+
 }
 
 .details-label {
     color: #676565;
     font-size: 0.82rem;
     font-weight: 600;
+}
+
+.move-left{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    height: 343.5px;
+    width: 30px;
+    font-family: 'Archivo';
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    color: #33313100;
+}
+
+.album-panel:hover .move-left {
+    background-color: #33313141;
+}
+
+.album-panel:hover .move-left i {
+    color: #fffefec5;
+}
+
+.move-right{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    height: 343.5px;
+    width: 35px;
+    left: 875px;
+    font-family: 'Archivo';
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    color: #33313100;
+}
+
+.album-panel:hover .move-right {
+    background-color: #33313141;
+}
+
+.album-panel:hover .move-right i {
+    color: #fffefec5;
 }
 
 .description {

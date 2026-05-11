@@ -83,12 +83,21 @@ $conn->close();
         <?php else: ?>
             <section class="listing-shell">
                 <div class="album-panel">
+                    <div class="move-left">
+                       <i class=""><em><<em></i>
+                    </div>
+
+                    <div class="move-right">
+                       <i class=""><em>><em></i>
+                    </div>
+                    
                     <div class="album-scroll">
                         <?php if (empty($images)): ?>
                             <div class="album-placeholder">
                                 <i class="fa-regular fa-image"></i>
                                 <p>No images available</p>
                             </div>
+
                         <?php else: ?>
                             <?php foreach ($images as $index => $image_url): ?>
                                 <img
@@ -98,6 +107,8 @@ $conn->close();
                             <?php endforeach; ?>
                         <?php endif; ?>
                     </div>
+
+                
                 </div>
 
                 <aside class="details-panel">
